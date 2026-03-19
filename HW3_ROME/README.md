@@ -1,4 +1,4 @@
-# HW_ROME
+# HW3_ROME
 
 This folder contains the ROME homework submission artifacts.
 
@@ -78,8 +78,7 @@ Include the important `iverilog` or `vvp` output snippets that motivated the fix
 
 - submit through the GitHub repo only
 - reuse the existing homework repo
-- put all required deliverables inside `HW_ROME/`
-- invite `weihuax6@gmail.com` as a collaborator if not already invited
+- put all required deliverables inside `HW3_ROME/`
 
 ## Important checks
 
