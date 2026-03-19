@@ -11,7 +11,6 @@ LLM4ChipDesign/
 └── README.md
 ```
 
----
 
 ## HW1_ChipChat/
 
@@ -29,6 +28,11 @@ LLM4ChipDesign/
 - `example2.ipynb` – AutoChip workflow for sequential/FSM example (e.g., sequence detector)
 - `AutoChip_Report.pdf` – Short report covering Part I(a) trajectory and Part I(b) manual design
 
+**Contents:**
+- `example1.ipynb` – AutoChip run for ChipChat Example A (binary-to-BCD, combinational)
+- `example2.ipynb` – AutoChip run for ChipChat Example B (sequence detector, FSM)
+- `autochip_min.py` – Minimal AutoChip-style generate/simulate/feedback loop
+- `README.md` – How to run HW2 and what evidence to capture
 
 ---
 
@@ -40,5 +44,4 @@ cd LLM4ChipDesign
 ```
 
 ---
-
 
