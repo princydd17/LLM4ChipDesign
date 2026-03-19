@@ -1,0 +1,43 @@
+$date
+	Tue Mar 17 17:01:01 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_binary_to_bcd_converter $end
+$var wire 8 ! bcd_output [7:0] $end
+$var reg 5 " binary_input [4:0] $end
+$var reg 8 # expected_bcd [7:0] $end
+$var reg 5 $ test_binary [4:0] $end
+$var reg 1 % vcd_clk $end
+$var integer 32 & i [31:0] $end
+$scope module uut $end
+$var wire 5 ' binary_input [4:0] $end
+$var wire 8 ( bcd_output [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+x%
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10000
+b1 #
+b1 "
+b1 '
+b1 $
+b1 &
+#20000

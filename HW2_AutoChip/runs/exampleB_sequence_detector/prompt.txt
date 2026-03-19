@@ -1,0 +1,15 @@
+Create a synthesizable Verilog module named sequence_detector.
+
+Specifications:
+- Inputs: clk, rst_n (active-low reset), data[2:0]
+- Outputs: seq_found (pulse high for 1 cycle when detected)
+
+Detect this exact sequence on consecutive clock cycles:
+  001, 101, 110, 000, 110, 110, 011, 101
+
+Requirements:
+- Implement a clean FSM (state register + next-state logic).
+- seq_found must be asserted for exactly one clock when the final element matches.
+- Must compile with iverilog -g2012.
+- Module name must be exactly: sequence_detector
+

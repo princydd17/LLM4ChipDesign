@@ -1,0 +1,14 @@
+{
+  "general": {
+    "prompt": "prompt.txt",
+    "name": "sequence_detector",
+    "testbench": "sequence_detector_tb.v",
+    "model_family": "NVIDIA",
+    "model_id": "meta/llama-3.1-8b-instruct",
+    "iterations": 6,
+    "num_candidates": 5,
+    "outdir": "/Users/princydoshi/Desktop/LLM4ChipDesign-1/HW2_AutoChip/runs/exampleB_sequence_detector",
+    "log": "run.log"
+  }
+}
+

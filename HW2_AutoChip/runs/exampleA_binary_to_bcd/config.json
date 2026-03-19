@@ -1,0 +1,13 @@
+{
+  "general": {
+    "prompt": "prompt.txt",
+    "name": "binary_to_bcd_converter",
+    "testbench": "binary_to_bcd_tb.v",
+    "model_family": "NVIDIA",
+    "model_id": "meta/llama-3.1-8b-instruct",
+    "iterations": 5,
+    "num_candidates": 4,
+    "outdir": "/Users/princydoshi/Desktop/LLM4ChipDesign-1/HW2_AutoChip/runs/exampleA_binary_to_bcd",
+    "log": "run.log"
+  }
+}
