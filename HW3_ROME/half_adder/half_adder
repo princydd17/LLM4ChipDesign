@@ -1,0 +1,83 @@
+#! /opt/homebrew/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+S_0x13af0cec0 .scope module, "half_addertb" "half_addertb" 2 2;
+ .timescale -9 -12;
+v0x13af1cbc0_0 .var "a", 0 0;
+v0x13af1cc60_0 .var "b", 0 0;
+v0x13af1cd10_0 .net "carry", 0 0, L_0x13af1d1b0;  1 drivers
+v0x13af1cde0_0 .var "expected_carry", 0 0;
+v0x13af1ce70_0 .var "expected_sum", 0 0;
+v0x13af1cf40_0 .var/i "i", 31 0;
+v0x13af1cfd0_0 .net "sum", 0 0, L_0x13af1d060;  1 drivers
+S_0x13af06700 .scope module, "dut" "half_adder" 2 11, 3 1 0, S_0x13af0cec0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "carry";
+L_0x13af1d060 .functor XOR 1, v0x13af1cbc0_0, v0x13af1cc60_0, C4<0>, C4<0>;
+L_0x13af1d1b0 .functor AND 1, v0x13af1cbc0_0, v0x13af1cc60_0, C4<1>, C4<1>;
+v0x13af0b3e0_0 .net "a", 0 0, v0x13af1cbc0_0;  1 drivers
+v0x13af1c970_0 .net "b", 0 0, v0x13af1cc60_0;  1 drivers
+v0x13af1ca10_0 .net "carry", 0 0, L_0x13af1d1b0;  alias, 1 drivers
+v0x13af1cac0_0 .net "sum", 0 0, L_0x13af1d060;  alias, 1 drivers
+    .scope S_0x13af0cec0;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x13af1cf40_0, 0, 32;
+T_0.0 ; Top of for-loop
+    %load/vec4 v0x13af1cf40_0;
+    %cmpi/s 4, 0, 32;
+	  %jmp/0xz T_0.1, 5;
+    %load/vec4 v0x13af1cf40_0;
+    %parti/s 1, 1, 2;
+    %store/vec4 v0x13af1cbc0_0, 0, 1;
+    %load/vec4 v0x13af1cf40_0;
+    %parti/s 1, 0, 2;
+    %store/vec4 v0x13af1cc60_0, 0, 1;
+    %delay 1000, 0;
+    %load/vec4 v0x13af1cbc0_0;
+    %load/vec4 v0x13af1cc60_0;
+    %xor;
+    %store/vec4 v0x13af1ce70_0, 0, 1;
+    %load/vec4 v0x13af1cbc0_0;
+    %load/vec4 v0x13af1cc60_0;
+    %and;
+    %store/vec4 v0x13af1cde0_0, 0, 1;
+    %load/vec4 v0x13af1cfd0_0;
+    %load/vec4 v0x13af1ce70_0;
+    %cmp/ne;
+    %jmp/1 T_0.5, 6;
+    %flag_mov 8, 6;
+    %load/vec4 v0x13af1cd10_0;
+    %load/vec4 v0x13af1cde0_0;
+    %cmp/ne;
+    %flag_or 6, 8;
+T_0.5;
+    %jmp/0xz  T_0.3, 6;
+    %vpi_call 2 21 "$display", "half_adder failed: a=%0b b=%0b expected_sum=%0b expected_carry=%0b got_sum=%0b got_carry=%0b", v0x13af1cbc0_0, v0x13af1cc60_0, v0x13af1ce70_0, v0x13af1cde0_0, v0x13af1cfd0_0, v0x13af1cd10_0 {0 0 0};
+    %vpi_call 2 22 "$finish" {0 0 0};
+T_0.3 ;
+T_0.2 ; for-loop step statement
+    %load/vec4 v0x13af1cf40_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0x13af1cf40_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ; for-loop exit label
+    %vpi_call 2 25 "$display", "half_adder passed!" {0 0 0};
+    %vpi_call 2 26 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "./half_adder/half_addertb.v";
+    "./half_adder/half_adder.v";

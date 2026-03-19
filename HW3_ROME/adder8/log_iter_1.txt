@@ -1,0 +1,20 @@
+user: The testbench failed to compile. Please fix the module. The output of iverilog is as follows:
+HW_ROME/adder8/adder8.v:50: syntax error
+HW_ROME/adder8/adder8.v:50: error: Invalid module instantiation
+
+assistant: module adder8(
+    input wire [7:0] a,
+    input wire [7:0] b,
+    input wire cin,
+    output wire [7:0] sum,
+    output wire cout
+);
+    wire carry_mid;
+    adder4 low_nibble (.a(a[3:0]), .b(b[3:0]), .cin(cin), .sum(sum[3:0]), .cout(carry_mid));
+    adder4 high_nibble (.a(a[7:4]), .b(b[7:4]), .cin(carry_mid), .sum(sum[7:4]), .cout(cout));
+endmodule
+
+Iteration status: Error running testbench
+
+vvp stdout:
+adder8 mismatch: a=3c b=52 cin=0 expected_sum=8e expected_cout=0 got_sum=xx got_cout=x
