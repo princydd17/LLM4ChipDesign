@@ -29,7 +29,6 @@ LLM4ChipDesign/
 - `example2.ipynb` – AutoChip workflow for sequential/FSM example (e.g., sequence detector)
 - `AutoChip_Report.pdf` – Short report covering Part I(a) trajectory and Part I(b) manual design
 
-*Add your completed files to this folder when ready.*
 
 ---
 
@@ -42,6 +41,4 @@ cd LLM4ChipDesign
 
 ---
 
-## Collaborators
 
-- weihuax6@gmail.com (invited)
