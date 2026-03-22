@@ -8,6 +8,9 @@ Homework submissions for LLM4ChipDesign course. Each homework is organized in it
 LLM4ChipDesign/
 ├── HW1_ChipChat/          # ChipChat assignment
 ├── HW2_AutoChip/          # AutoChip Tutorial assignment
+├── HW3_ROME/              # ROME hierarchical RTL assignment
+├── HW4_TestBench/        # HW4: Enhanced LLM-Aided Testbench Generation
+├── HW5_Veritas/          # HW5: Veritas (CNF → BENCH → Verilog)
 └── README.md
 ```
 
@@ -33,6 +36,22 @@ LLM4ChipDesign/
 - `example2.ipynb` – AutoChip run for ChipChat Example B (sequence detector, FSM)
 - `autochip_min.py` – Minimal AutoChip-style generate/simulate/feedback loop
 - `README.md` – How to run HW2 and what evidence to capture
+
+---
+
+## HW4_TestBench/ (HW4)
+
+**Enhanced LLM-Aided Testbench Generation** (deadline: Mar. 14)
+
+- Submit via GitHub only; invite `weihuax6@gmail.com` as collaborator if needed
+- Add all deliverables per the assignment PDF into `HW4_TestBench/`
+- Notebook must run top-to-bottom (except API key); no secrets committed
+
+---
+
+## HW5_Veritas/ (HW5)
+
+**Veritas tutorial** — CNF → BENCH → Verilog pipeline; see `HW5_Veritas/README.md` and `veritas_hw.ipynb`.
 
 ---
 
