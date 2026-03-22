@@ -7,6 +7,7 @@ Correct-by-construction Verilog via **CNF → BENCH → Verilog**, with oracle v
 | File / folder | Purpose |
 |---------------|---------|
 | **`veritas_hw.ipynb`** | Main notebook — run Steps 0–5, save with outputs for submission. |
+| **`../colab-scripts/Veritas_tutorial.ipynb`** | Same content as `veritas_hw.ipynb` (course-style path); uses **`veritas_api_setup.py`** for **NVIDIA `nvapi-...`** keys. |
 | **`veritas_api_setup.py`** | **API key / model / base URL** — loaded by `exec()` from the notebook so Jupyter never runs a stale in-memory copy of the setup. |
 | **`hw5_config.py`** | Optional duplicate of API helpers (legacy); **`veritas_api_setup.py`** is what the notebook uses. |
 | **`report_template.md`** | Outline for `Veritas_Report.pdf` (fill in, then export to PDF). |

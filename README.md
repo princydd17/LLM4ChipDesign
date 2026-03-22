@@ -11,6 +11,7 @@ LLM4ChipDesign/
 ├── HW3_ROME/              # ROME hierarchical RTL assignment
 ├── HW4_TestBench/        # HW4: Enhanced LLM-Aided Testbench Generation
 ├── HW5_Veritas/          # HW5: Veritas (CNF → BENCH → Verilog)
+├── colab-scripts/        # Veritas_tutorial.ipynb (+ veritas_api_setup.py for Colab/NVIDIA)
 └── README.md
 ```
 
