@@ -30,9 +30,12 @@ OPENAI_DEFAULT_MODEL = "gpt-5-mini-2025-08-07"
 _g = globals()
 _manual = str(_g.get("MANUAL_API_KEY") or "").strip()
 
-_key = (os.getenv("OPENAI_API_KEY") or "").strip()
-if not _key:
-    _key = _manual
+# Accept common env names (NVIDIA console sometimes labels keys separately)
+_key = (
+    (os.getenv("OPENAI_API_KEY") or "").strip()
+    or (os.getenv("NVIDIA_API_KEY") or "").strip()
+    or _manual
+)
 API_KEY = _key or None
 
 BASE_URL = os.getenv("OPENAI_BASE_URL") or None
@@ -47,10 +50,13 @@ if API_KEY and API_KEY.startswith("nvapi-"):
 
 if not API_KEY:
     raise ValueError(
-        "No API key. Options:\n"
-        f"  1) Create {_here / '.env'} with OPENAI_API_KEY=...\n"
-        "  2) In the notebook cell ABOVE exec(): set MANUAL_API_KEY = 'your-key'\n"
-        "  3) pip install python-dotenv\n"
+        "No API key found.\n"
+        f"  1) Create {_here / '.env'} with:\n"
+        "       OPENAI_API_KEY=nvapi-...\n"
+        "     (or NVIDIA_API_KEY=nvapi-...)\n"
+        "  2) In the notebook cell above exec(): set MANUAL_API_KEY = 'nvapi-...'\n"
+        "  3) Or in a cell: %env OPENAI_API_KEY=nvapi-...\n"
+        "  4) pip install python-dotenv  (needed to load .env files)\n"
     )
 
 print(f"Using model: {MODEL_NAME}")
