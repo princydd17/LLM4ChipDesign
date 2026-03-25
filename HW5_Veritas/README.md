@@ -9,11 +9,13 @@ Correct-by-construction Verilog via **CNF → BENCH → Verilog**, with oracle v
 | **`veritas_hw.ipynb`** | Main notebook — run Steps 0–5, save with outputs for submission. |
 | **`../colab-scripts/Veritas_tutorial.ipynb`** | Same content as `veritas_hw.ipynb` (course-style path); uses **`veritas_api_setup.py`** for **NVIDIA `nvapi-...`** keys. |
 | **`veritas_api_setup.py`** | **API key / model / base URL** — loaded by `exec()` from the notebook so Jupyter never runs a stale in-memory copy of the setup. |
-| **`hw5_config.py`** | Optional duplicate of API helpers (legacy); **`veritas_api_setup.py`** is what the notebook uses. |
 | **`report_template.md`** | Outline for `Veritas_Report.pdf` (fill in, then export to PDF). |
+| **`oracle_veritas.py`** | Part II — compare `{design}_{typ}_tab.csv` to Python reference oracles (adder, subtractor, decoder, 2×1 mux). |
 | **`requirements.txt`** | `pip install -r requirements.txt` (OpenAI client for API calls). |
 | **`.env.example`** | Shows env vars (no real secrets). Copy to `.env` locally if you use one. |
 | **`artifacts/`** | Put each run’s outputs here, e.g. `artifacts/adder_3-bit/`, `artifacts/decoder_2x4/`. |
+| **`decoder_2x4.cnf`** | Checked-in minterm CNF for the non-adder Part I run (2×4 decoder). |
+| **`refresh_veritas_artifacts.py`** | Regenerates `decoder_2x4.{bench,_tab.csv,.v}`, `adder_5-bit.v`, and copies `artifacts/decoder_2x4/` and `artifacts/adder_5-bit/`. Run: `python3 refresh_veritas_artifacts.py` from this folder. |
 
 Do **not** commit API keys or `.env` with real keys.
 

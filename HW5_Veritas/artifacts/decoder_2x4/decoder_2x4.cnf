@@ -1,0 +1,5 @@
+# 2-to-4 decoder: inputs A0 (LSB), A1; one-hot outputs Y0..Y3 (parseable minterms)
+Y0 = (!A0) & (!A1)
+Y1 = (A0) & (!A1)
+Y2 = (!A0) & (A1)
+Y3 = (A0) & (A1)

@@ -59,6 +59,10 @@ if not API_KEY:
         "  4) pip install python-dotenv  (needed to load .env files)\n"
     )
 
+# Seconds per HTTP request to the chat API (multi-step adder chains can be slow).
+REQUEST_TIMEOUT = float(os.getenv("OPENAI_TIMEOUT", "300"))
+
 print(f"Using model: {MODEL_NAME}")
 print(f"Base URL: {BASE_URL or '(OpenAI default — sk-... keys only)'}")
+print(f"OPENAI_TIMEOUT (HTTP request): {REQUEST_TIMEOUT}s — increase if calls time out mid-run.")
 print("veritas_api_setup.py loaded — OK (this line proves you are not on the old notebook cell)")
