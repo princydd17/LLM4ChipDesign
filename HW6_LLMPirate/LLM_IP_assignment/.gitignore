@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+env/
+venv/
+
+# Results and logs
+*.log
+all_log.log
+Sim_log.log
+src/outputs/
+src/tmp/
+src/__pycache__/
+src/successful_circuits/
+results/
+saved_circuits_for_MOSS/
+successful_circuits/
+tmp/
+
+# Large files (exceed GitHub limits)
+abc/abc
+jdk_21_installation/
+
+# Large dataset files (can be regenerated or downloaded separately)
+all_GNN4IP_files/IP-Netlist-toy/MOR1KX/
+all_GNN4IP_files/utils/mor1kx_final.v
+
+# Large JAR (provide download link instead)
+jplag-5.0.0-jar-with-dependencies.jar
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/

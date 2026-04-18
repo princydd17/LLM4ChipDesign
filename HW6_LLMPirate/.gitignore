@@ -1,0 +1,5 @@
+.env
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+LLM_IP_assignment/tmp_eval/
