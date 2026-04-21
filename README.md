@@ -1,67 +1,117 @@
 # LLM4ChipDesign
 
-Homework submissions for LLM4ChipDesign course. Each homework is organized in its own folder.
+Homework repository for the LLM4ChipDesign course.  
+Each assignment is organized in its own folder (`HW1` through `HW7`) with code, reports, and supporting artifacts.
 
 ## Repository Structure
 
-```
+```text
 LLM4ChipDesign/
-├── HW1_ChipChat/          # ChipChat assignment
-├── HW2_AutoChip/          # AutoChip Tutorial assignment
-├── HW3_ROME/              # ROME hierarchical RTL assignment
-├── HW4_TestBench/        # HW4: Enhanced LLM-Aided Testbench Generation
-├── HW5_Veritas/          # HW5: Veritas (CNF → BENCH → Verilog)
-├── colab-scripts/        # Veritas_tutorial.ipynb (+ veritas_api_setup.py for Colab/NVIDIA)
+├── HW1_ChipChat/      # HW1: ChipChat fundamentals
+├── HW2_AutoChip/      # HW2: AutoChip tutorial and report
+├── HW3_ROME/          # HW3: ROME hierarchical RTL workflow
+├── HW4_TestBench/     # HW4: LLM-aided testbench generation
+├── HW5_Veritas/       # HW5: Veritas CNF -> BENCH -> Verilog pipeline
+├── HW6_LLMPirate/     # HW6: LLMPirate workshop and IP experiments
+├── HW7_Adder/         # HW7: Adder generation, verification, optimization
 └── README.md
 ```
 
+---
 
-## HW1_ChipChat/
+## HW1 - ChipChat (`HW1_ChipChat/`)
 
-**Contents:**
-- `chipchat_exampleA.ipynb` – Binary-to-BCD converter (combinational example)
-- `chipchat_exampleB.ipynb` – Sequence detector (sequential/FSM example)
-- `chipchat_extension.ipynb` – Extension notebook (if applicable)
+**Focus:** Basic LLM-assisted RTL design tasks (combinational + sequential).
+
+**Key files:**
+- `chipchat_exampleA.ipynb` - combinational example (binary-to-BCD)
+- `chipchat_exampleB.ipynb` - FSM/sequence detector example
+- `chipchat_extension.ipynb` - extension work (if applicable)
 
 ---
 
-## HW2_AutoChip/
+## HW2 - AutoChip (`HW2_AutoChip/`)
 
-**Submission checklist (per assignment PDF):**
-- `example1.ipynb` – AutoChip workflow for combinational example (e.g., binary-to-BCD)
-- `example2.ipynb` – AutoChip workflow for sequential/FSM example (e.g., sequence detector)
-- `AutoChip_Report.pdf` – Short report covering Part I(a) trajectory and Part I(b) manual design
+**Focus:** AutoChip workflow execution and manual refinement.
 
-**Contents:**
-- `example1.ipynb` – AutoChip run for ChipChat Example A (binary-to-BCD, combinational)
-- `example2.ipynb` – AutoChip run for ChipChat Example B (sequence detector, FSM)
-- `autochip_min.py` – Minimal AutoChip-style generate/simulate/feedback loop
-- `README.md` – How to run HW2 and what evidence to capture
+**Key files:**
+- `example1.ipynb` - combinational AutoChip flow
+- `example2.ipynb` - sequential/FSM AutoChip flow
+- `autochip_min.py` - minimal generate/simulate/feedback loop
+- `AutoChip_Report.pdf` - report for Part I trajectory + manual design
+- `README.md` - run instructions and submission notes
 
 ---
 
-## HW4_TestBench/ (HW4)
+## HW3 - ROME (`HW3_ROME/`)
 
-**Enhanced LLM-Aided Testbench Generation** (deadline: Mar. 14)
+**Focus:** Hierarchical RTL decomposition and regeneration using ROME-style prompting.
 
-- Submit via GitHub only; invite `weihuax6@gmail.com` as collaborator if needed
-- Add all deliverables per the assignment PDF into `HW4_TestBench/`
-- Notebook must run top-to-bottom (except API key); no secrets committed
+**Typical deliverables:**
+- hierarchy decomposition artifacts
+- regenerated RTL modules
+- validation/comparison notes
 
----
-
-## HW5_Veritas/ (HW5)
-
-**Veritas tutorial** — CNF → BENCH → Verilog pipeline; see `HW5_Veritas/README.md` and `veritas_hw.ipynb`.
+See `HW3_ROME/` contents for exact files used in this submission.
 
 ---
 
-## How to Clone
+## HW4 - Testbench Generation (`HW4_TestBench/`)
+
+**Focus:** Enhanced LLM-aided testbench generation and validation.
+
+**Typical deliverables:**
+- generated testbenches
+- simulation evidence
+- analysis of test quality/coverage
+
+See `HW4_TestBench/` for assignment-specific outputs and notes.
+
+---
+
+## HW5 - Veritas (`HW5_Veritas/`)
+
+**Focus:** CNF -> BENCH -> Verilog pipeline with Veritas tooling.
+
+**Key files:**
+- `veritas_hw.ipynb` - main workflow notebook
+- `README.md` - setup and execution notes
+- generated artifacts and helper scripts under `HW5_Veritas/`
+
+---
+
+## HW6 - LLMPirate (`HW6_LLMPirate/`)
+
+**Focus:** LLMPirate workshop/IP assignment experiments.
+
+**Typical deliverables:**
+- piracy/similarity evaluation scripts
+- simulation support code
+- analysis outputs from workshop tasks
+
+See `HW6_LLMPirate/` for detailed subfolders and runnable components.
+
+---
+
+## HW7 - Adder Project (`HW7_Adder/`)
+
+**Focus:** LLM-based adder generation, verification, and Yosys-guided optimization.
+
+**Main stages:**
+- Part 1: golden RTL selection + natural-language descriptions + LLM regeneration
+- Part 2: testbench generation with internal-signal checks + exhaustive simulation
+- Part 3: optimization loop (area/delay/balanced) + best-design validation + equivalence
+
+**Start here:**
+- `HW7_Adder/README.md`
+- `HW7_Adder/CHECKLIST.md`
+
+---
+
+## Clone
 
 ```bash
 git clone https://github.com/princydd17/LLM4ChipDesign.git
 cd LLM4ChipDesign
 ```
-
----
 

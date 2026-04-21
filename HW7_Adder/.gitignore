@@ -11,3 +11,6 @@ __pycache__/
 # Optional large PDK / liberty (document download in part3/yosys/README.md if omitted)
 nangate45.lib
 part3/yosys/nangate45.lib
+.env
+*.vvp
+.DS_Store
