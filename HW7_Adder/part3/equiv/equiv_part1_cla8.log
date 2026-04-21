@@ -1,0 +1,107 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.64 (git sha1 d8dab5b32666564eca8e18f412973853ce006e61, clang++ 17.0.0 -fPIC -O3)
+
+-- Executing script file `equiv/equiv_part1_cla8.ys' --
+
+1. Executing Verilog-2005 frontend: equiv/CLA8_golden_yosys.v
+Parsing Verilog input from `equiv/CLA8_golden_yosys.v' to AST representation.
+Generating RTLIL representation for module `\PGGen'.
+Generating RTLIL representation for module `\CLA8'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \CLA8
+Used module:     \PGGen
+
+2.2. Analyzing design hierarchy..
+Top module:  \CLA8
+Used module:     \PGGen
+Removed 0 unused modules.
+Mapping positional arguments of cell CLA8.pggen[7] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[6] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[5] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[4] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[3] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[2] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[1] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[0] (PGGen).
+
+3. Executing FLATTEN pass (flatten design).
+Deleting now unused module PGGen.
+<suppressed ~8 debug messages>
+
+4. Executing Verilog-2005 frontend: equiv/CLA8_llm_yosys.v
+Parsing Verilog input from `equiv/CLA8_llm_yosys.v' to AST representation.
+Generating RTLIL representation for module `\PGGen'.
+Generating RTLIL representation for module `\CLA8'.
+Successfully finished Verilog frontend.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \CLA8
+Used module:     \PGGen
+
+5.2. Analyzing design hierarchy..
+Top module:  \CLA8
+Used module:     \PGGen
+Removed 0 unused modules.
+Mapping positional arguments of cell CLA8.pggen[7] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[6] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[5] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[4] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[3] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[2] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[1] (PGGen).
+Mapping positional arguments of cell CLA8.pggen[0] (PGGen).
+
+6. Executing FLATTEN pass (flatten design).
+Deleting now unused module PGGen.
+<suppressed ~8 debug messages>
+
+7. Executing MITER pass (creating miter circuit).
+Creating miter cell "miter" with gold cell "gold" and gate cell "gate".
+
+7.1. Executing FLATTEN pass (flatten design).
+<suppressed ~2 debug messages>
+
+7.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~90 debug messages>
+Removed 0 unused cells and 206 unused wires.
+
+8. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up SAT problem:
+Final constraint equation: { } = { }
+Imported 292 cells to SAT database.
+Import proof-constraint: \trigger = 1'0
+Final proof equation: \trigger = 1'0
+Import show expression: \in_a
+Import show expression: \in_b
+Import show expression: \trigger
+
+Solving problem with 1401 variables and 3611 clauses..
+SAT proof finished - no model found: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+
+End of script. Logfile hash: 4323d1c0ea, time: 0.02s, user: 0.02s, system: 0.00s, MEM: 17.38 MB peak
+Yosys 0.64 (git sha1 d8dab5b32666564eca8e18f412973853ce006e61, clang++ 17.0.0 -fPIC -O3)
+Time spent: 36% 4x read_verilog (0 sec), 35% 1x sat (0 sec), ...

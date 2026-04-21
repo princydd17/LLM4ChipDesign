@@ -1,0 +1,12 @@
+Run from directory: HW7_Adder/part3
+
+RCA8 (golden vs llm_generated)
+  Command: yosys -s equiv/equiv_part1_rca8.ys 2>&1 | tee equiv/equiv_part1_rca8.log
+  Result: SAT proof finished - no model found: SUCCESS (equivalent under miter)
+
+CLA8 (golden vs llm_generated, via CLA8_*_yosys.v wrappers)
+  Command: yosys -s equiv/equiv_part1_cla8.ys 2>&1 | tee equiv/equiv_part1_cla8.log
+  Result: SAT proof finished - no model found: SUCCESS (equivalent under miter)
+
+Note: CLA8_golden_yosys.v / CLA8_llm_yosys.v are logically identical to part1 sources except
+expanded xor primitives for Yosys parser limitations; keep them in sync if you edit CLA8 RTL.

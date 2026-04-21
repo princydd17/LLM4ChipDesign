@@ -1,0 +1,3 @@
+BEST ADDER: PASS=65536 FAIL=0
+FINAL STATUS: PASS
+best_adder_tb.v:45: $finish called at 65536000 (1ps)

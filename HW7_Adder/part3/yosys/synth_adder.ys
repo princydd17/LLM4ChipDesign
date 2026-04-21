@@ -1,0 +1,10 @@
+# Generic Yosys synthesis (no Liberty). Edit paths or use `run_yosys.py` for automation.
+#
+# From this directory:
+#   yosys synth_adder.ys
+
+read_verilog ../../part1/golden/RCA8.v
+hierarchy -check -top RCA8
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+stat

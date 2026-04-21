@@ -1,0 +1,23 @@
+# Formal equivalence: golden CLA8 vs LLM CLA8.
+# Run from HW7_Adder/part3:
+#   yosys -s equiv/equiv_part1_cla8.ys 2>&1 | tee equiv/equiv_part1_cla8.log
+#
+# Uses equiv/CLA8_*_yosys.v: copies of golden/LLM RTL with xor primitive arrays
+# expanded (Yosys does not accept xor x[7:1](...) cell arrays).
+
+read_verilog equiv/CLA8_golden_yosys.v
+hierarchy -top CLA8
+flatten
+design -stash gold
+
+design -reset
+read_verilog equiv/CLA8_llm_yosys.v
+hierarchy -top CLA8
+flatten
+design -stash gate
+
+design -reset
+design -copy-from gold -as gold CLA8
+design -copy-from gate -as gate CLA8
+miter -equiv -flatten gold gate miter
+sat -verify -prove trigger 0 -show-inputs -show-outputs miter

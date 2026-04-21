@@ -1,0 +1,3 @@
+CLA8_tb complete: PASS=65536 FAIL=0
+CLA8_tb FINAL STATUS: PASS
+cla8/CLA8_tb.v:80: $finish called at 65537000 (1ps)

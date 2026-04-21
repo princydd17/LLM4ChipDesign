@@ -1,0 +1,22 @@
+# Formal equivalence: golden RCA8 vs LLM RCA8.
+# Run from HW7_Adder/part3:
+#   yosys -s equiv/equiv_part1_rca8.ys 2>&1 | tee equiv/equiv_part1_rca8.log
+#
+# Requires flatten before miter so FA submodules become $xor/$and/$or (SAT-friendly).
+
+read_verilog ../part1/golden/RCA8.v
+hierarchy -top RCA8
+flatten
+design -stash gold
+
+design -reset
+read_verilog ../part1/llm_generated/RCA8_llm.v
+hierarchy -top RCA8
+flatten
+design -stash gate
+
+design -reset
+design -copy-from gold -as gold RCA8
+design -copy-from gate -as gate RCA8
+miter -equiv -flatten gold gate miter
+sat -verify -prove trigger 0 -show-inputs -show-outputs miter

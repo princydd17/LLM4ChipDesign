@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+*.key
+*.vvp
+.DS_Store
+__pycache__/
+.venv/
+*.pem
+
+# Optional large PDK / liberty (document download in part3/yosys/README.md if omitted)
+nangate45.lib
+part3/yosys/nangate45.lib

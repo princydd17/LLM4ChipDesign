@@ -1,0 +1,6 @@
+Starting_Architecture,Mode,Final_Cells,Final_Logic_Levels,Final_Area_um2,Architecture_Identified,Status
+RCA8,area,40,,,
+RCA8,delay,40,,,
+RCA8,balanced,40,,,
+CLA8,baseline,,,,CLA-style carry lookahead,parse incomplete in generic stat flow
+KSA8,baseline,75,,,Kogge-Stone style prefix adder,baseline measured

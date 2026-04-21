@@ -1,0 +1,3 @@
+RCA8_tb complete: PASS=65536 FAIL=0
+RCA8_tb FINAL STATUS: PASS
+rca8/RCA8_tb.v:74: $finish called at 65537000 (1ps)

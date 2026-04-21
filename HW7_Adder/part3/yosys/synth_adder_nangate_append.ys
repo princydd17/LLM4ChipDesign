@@ -1,0 +1,10 @@
+# Append after generic mapping when nangate45.lib is available:
+#   dfflibmap -liberty nangate45.lib
+#   abc -liberty nangate45.lib -constr constraints.sdc
+#   clean
+#   stat -liberty nangate45.lib
+
+dfflibmap -liberty nangate45.lib
+abc -liberty nangate45.lib -constr constraints.sdc
+clean
+stat -liberty nangate45.lib

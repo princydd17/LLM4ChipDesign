@@ -1,0 +1,13 @@
+# Formal equivalence: golden vs optimized LLM design.
+# EDIT module names and file paths to match your RTL.
+#
+# Example from spec (rename top modules to avoid clashes):
+#   read_verilog -sv golden_RCA8.v
+#   rename RCA8 gold
+#   read_verilog -sv best_adder.v
+#   rename OptimizedTop gate
+#   equiv_make gold gate
+#   equiv_simple
+#   equiv_status
+#
+# Run: yosys -s equiv_check.ys
